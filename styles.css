@@ -148,46 +148,80 @@ nav a:hover {
     color: #e0e0e0;
 }
 
-/* Sidebar Navigation */
+/* Sidebar Navigation (side popout) */
 .sidebar {
-    /* Sidebar container styles */
+    /* Side popout panel, hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background: linear-gradient(180deg, #16171a 80%, #232326 100%);
+    box-shadow: 2px 0 24px rgba(20,20,24,0.28);
+    border-radius: 0 18px 18px 0;
+    z-index: 200;
+    padding: 3em 1em 1em 1em;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, #16171a 80%, #232326 100%);
-    padding: 2em 1em;
-    min-width: 160px;
-    max-width: 200px;
-    height: 100%;
-    box-shadow: 2px 0 12px rgba(20,20,24,0.13);
-    border-radius: 0 18px 18px 0;
-    margin-right: 2em;
     gap: 1.5em;
     align-items: flex-start;
-    /* Hide sidebar by default for desktop, will be shown only for dropdown trigger */
-    position: fixed;
-    top: 2.5em;
-    left: 2em;
-    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar .sidebar-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sidebar .sidebar-links a {
+    color: #f5f5f5;
+    background: transparent;
+    padding: 0.7em 1.2em;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: background 0.2s, color 0.2s;
+    display: block;
+}
+
+.sidebar .sidebar-links a:hover {
+    background: #35363a;
+    color: #fff;
+}
+
+/* Sidebar close button */
+.sidebar .closebtn {
+    position: absolute;
+    top: 1em;
+    right: 1em;
     background: none;
-    box-shadow: none;
+    border: none;
+    color: #f5f5f5;
+    font-size: 2em;
+    cursor: pointer;
     padding: 0;
-    min-width: unset;
-    max-width: unset;
-    margin-right: 0;
-    gap: 0;
+    line-height: 1;
+    transition: color 0.2s;
 }
 
-/* Dropdown menu styles */
-.dropdown {
-    position: relative;
-    width: auto;
+.sidebar .closebtn:hover {
+    color: #fff;
 }
 
-.dropbtn {
+/* Hamburger button in header */
+.hamburger-btn {
     background: none;
     border: none;
     padding: 0;
-    margin: 0;
+    margin: 0 1em 0 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -198,103 +232,69 @@ nav a:hover {
     transition: background 0.2s;
 }
 
-.dropbtn img {
+.hamburger-btn img {
     width: 32px;
     height: 32px;
     filter: invert(1);
 }
 
-.dropbtn:hover, .dropbtn:focus {
+.hamburger-btn:hover, .hamburger-btn:focus {
     background-color: #232326;
 }
 
-.dropbtn::after {
-    display: none;
+/* Hide old dropdown styles */
+.dropdown, .dropdown-content {
+    display: none !important;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 48px;
-    background-color: #232326;
-    min-width: 160px;
-    box-shadow: 0 8px 24px rgba(20,20,24,0.28);
-    border-radius: 8px;
-    z-index: 1;
-    flex-direction: column;
-    padding: 0.5em 0;
-}
-
-.dropdown.open .dropdown-content,
-.dropdown:focus-within .dropdown-content,
-.dropdown:hover .dropdown-content {
-    display: flex;
-}
-
-.dropdown-content a {
-    color: #f5f5f5;
-    background: transparent;
-    padding: 0.7em 1.2em;
-    text-decoration: none;
-    display: block;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 1.08em;
-    transition: background 0.2s, color 0.2s;
-}
-
-.dropdown-content a:hover {
-    background: #35363a;
-    color: #fff;
-}
-
-/* Position sidebar trigger in header */
-.header-bar {
-    /* ...existing code... */
-    position: relative;
-}
-
-.header-bar .sidebar {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    margin: 0 1em 0 0;
-    height: auto;
-}
-
+/* Responsive Design: Tablet */
 @media (max-width: 900px) {
-    /* ...existing code... */
-    .header-bar .sidebar {
-        margin: 0 0.5em 0 0;
+    .container {
+        flex-direction: column;
+    }
+    .row {
+        flex-direction: column;
+        gap: 2em;
+        margin: 2em 2vw;
+    }
+    .post-text-box, .profile {
+        width: 100%;
+        min-width: unset;
+    }
+    .sidebar {
+        width: 100vw;
+        border-radius: 0 0 18px 18px;
+        padding-top: 4em;
+    }
+    .dropdown {
+        width: 100%;
+    }
+    .dropbtn, .dropdown-content {
+        width: 100%;
+    }
+    main {
+        width: 100%;
     }
 }
 
+/* Responsive Design: Mobile */
 @media (max-width: 600px) {
-    /* ...existing code... */
-    .header-bar .sidebar {
-        display: flex;
+    header, .row {
+        margin: 0;
+        padding: 1em;
+    }
+    .post-text-box, .profile {
+        padding: 1em;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .sidebar {
+        width: 100vw;
+        border-radius: 0 0 18px 18px;
+        padding-top: 4em;
     }
 }
-
-/* Main Content Area */
-main {
-    /* Main content flex settings */
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-/* Footer Section */
-footer {
-    /* Footer background and text styles */
-    background: linear-gradient(90deg, #16171a 60%, #232326 100%);
-    color: #f5f5f5;
     text-align: center;
     padding: 1.5em 0 1em 0;
     margin-top: 3em;

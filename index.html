@@ -6,19 +6,10 @@
    <body>
       <header>
          <div class="header-bar">
-            <!-- Sidebar dropdown trigger as image button beside title -->
-            <div class="sidebar">
-               <div class="dropdown" id="sidebarDropdown">
-                  <button class="dropbtn" onclick="toggleDropdown(event)">
-                     <img src="menu-icon.svg" alt="Menu" />
-                  </button>
-                  <div class="dropdown-content">
-                     <a href="https://collindang24.github.io/">Home</a>
-                     <a href="about">About</a>
-                     <a href="projects">Projects</a>
-                  </div>
-               </div>
-            </div>
+            <!-- Hamburger button to open sidebar -->
+            <button class="hamburger-btn" onclick="openSidebar()" aria-label="Open menu">
+               <img src="menu-icon.svg" alt="Menu" />
+            </button>
             <h1>Collin Dang</h1>
             <nav>
                <a href="https://github.com/CollinDang24" target="_blank">Github</a>
@@ -26,18 +17,16 @@
             </nav>
          </div>
       </header>
+      <!-- Side popout menu -->
+      <nav class="sidebar" id="sidebarNav">
+         <button class="closebtn" onclick="closeSidebar()" aria-label="Close menu">&times;</button>
+         <div class="sidebar-links">
+            <a href="https://collindang24.github.io/">Home</a>
+            <a href="about">About</a>
+            <a href="projects">Projects</a>
+         </div>
+      </nav>
       <div class="container">
-         <!-- Sidebar with dropdown menu -->
-         <aside class="sidebar">
-            <div class="dropdown" id="sidebarDropdown">
-               <button class="dropbtn" onclick="toggleDropdown(event)">Menu</button>
-               <div class="dropdown-content">
-                  <a href="https://collindang24.github.io/">Home</a>
-                  <a href="about">About</a>
-                  <a href="projects">Projects</a>
-               </div>
-            </div>
-         </aside>
          <main>
             <div class="row">
                <div class="post-text-box">
@@ -62,13 +51,24 @@
          <!-- Footer can be left empty or with copyright -->
       </footer>
       <script>
-         function toggleDropdown(event) {
-            event.stopPropagation();
-            var dd = document.getElementById('sidebarDropdown');
-            dd.classList.toggle('open');
+         function openSidebar() {
+            document.getElementById('sidebarNav').classList.add('open');
          }
-         // Close dropdown when clicking outside
+         function closeSidebar() {
+            document.getElementById('sidebarNav').classList.remove('open');
+         }
+         // Optional: close sidebar when clicking outside
          document.addEventListener('click', function(e) {
+            const sidebar = document.getElementById('sidebarNav');
+            if (sidebar.classList.contains('open')) {
+               if (!sidebar.contains(e.target) && !e.target.classList.contains('hamburger-btn') && !e.target.closest('.hamburger-btn')) {
+                  sidebar.classList.remove('open');
+               }
+            }
+         });
+      </script>
+   </body>
+</html>
             var dd = document.getElementById('sidebarDropdown');
             if (dd && dd.classList.contains('open')) {
                dd.classList.remove('open');
