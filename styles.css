@@ -201,25 +201,6 @@ nav a:hover {
     color: #fff;
 }
 
-/* Sidebar close button */
-.sidebar .closebtn {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    background: none;
-    border: none;
-    color: #f5f5f5;
-    font-size: 2em;
-    cursor: pointer;
-    padding: 0;
-    line-height: 1;
-    transition: color 0.2s;
-}
-
-.sidebar .closebtn:hover {
-    color: #fff;
-}
-
 /* Hamburger button in header (animated) */
 .hamburger-btn {
     background: none;
@@ -257,7 +238,7 @@ nav a:hover {
 
 /* Animate the bars when .change is applied */
 .hamburger-btn.change .bar1 {
-    transform: translate(0, 5px) rotate(-45deg);
+    transform: translate(0, 6px) rotate(-45deg);
 }
 
 .hamburger-btn.change .bar2 {
@@ -265,7 +246,7 @@ nav a:hover {
 }
 
 .hamburger-btn.change .bar3 {
-    transform: translate(0, -5px) rotate(45deg);
+    transform: translate(0, -6px) rotate(45deg);
 }
 
 .hamburger-btn:hover, .hamburger-btn:focus {
