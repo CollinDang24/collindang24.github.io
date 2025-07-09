@@ -6,9 +6,21 @@
    <body>
       <header>
          <div class="header-bar">
+            <!-- Sidebar dropdown trigger as image button beside title -->
+            <div class="sidebar">
+               <div class="dropdown" id="sidebarDropdown">
+                  <button class="dropbtn" onclick="toggleDropdown(event)">
+                     <img src="menu-icon.svg" alt="Menu" />
+                  </button>
+                  <div class="dropdown-content">
+                     <a href="https://collindang24.github.io/">Home</a>
+                     <a href="about">About</a>
+                     <a href="projects">Projects</a>
+                  </div>
+               </div>
+            </div>
             <h1>Collin Dang</h1>
             <nav>
-               <!-- Social links in header nav -->
                <a href="https://github.com/CollinDang24" target="_blank">Github</a>
                <a href="https://www.linkedin.com/in/collindang-ott/" target="_blank">LinkedIn</a>
             </nav>

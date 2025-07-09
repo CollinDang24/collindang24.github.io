@@ -4,18 +4,18 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #181920 0%, #232336 100%);
-    color: #e0e0e0;
+    background: linear-gradient(135deg, #16171a 0%, #232326 100%);
+    color: #f5f5f5;
     min-height: 100vh;
 }
 
 /* Header Section */
 header {
     /* Header background and padding */
-    background: linear-gradient(90deg, #232336 60%, #181920 100%);
+    background: linear-gradient(90deg, #232326 60%, #16171a 100%);
     color: #fff;
     padding: 2em 2em 1em 2em;
-    box-shadow: 0 2px 12px rgba(20,20,40,0.18);
+    box-shadow: 0 2px 12px rgba(20,20,24,0.18);
 }
 
 .header-bar {
@@ -23,6 +23,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .header-bar h1 {
@@ -31,6 +32,7 @@ header {
     font-size: 2.5em;
     letter-spacing: 2px;
     font-weight: 700;
+    color: #fff;
 }
 
 .header-bar nav {
@@ -41,7 +43,8 @@ header {
 
 .header-bar nav a {
     /* Header navigation link styles */
-    color: #e0e0e0;
+    color: #f5f5f5;
+    background: transparent;
     margin-right: 0;
     text-decoration: none;
     font-weight: 500;
@@ -49,12 +52,11 @@ header {
     padding: 0.3em 0.8em;
     border-radius: 4px;
     transition: background 0.2s, color 0.2s;
-    background: transparent;
 }
 
 .header-bar nav a:hover {
     /* Header navigation link hover effect */
-    background: #35355a;
+    background: #35363a;
     color: #fff;
 }
 
@@ -66,7 +68,8 @@ nav {
 
 nav a {
     /* Main navigation link styles */
-    color: #e0e0e0;
+    color: #f5f5f5;
+    background: transparent;
     margin-right: 1.5em;
     text-decoration: none;
     font-weight: 500;
@@ -74,12 +77,11 @@ nav a {
     padding: 0.3em 0.8em;
     border-radius: 4px;
     transition: background 0.2s, color 0.2s;
-    background: transparent;
 }
 
 nav a:hover {
     /* Main navigation link hover effect */
-    background: #35355a;
+    background: #35363a;
     color: #fff;
 }
 
@@ -103,25 +105,25 @@ nav a:hover {
 /* Content Boxes (Posts & Profile) */
 .post-text-box, .profile {
     /* Card-like styling for posts and profile */
-    background: #232336;
+    background: #232326;
+    color: #fff;
     padding: 2em 1.5em;
     border-radius: 14px;
-    box-shadow: 0 4px 24px rgba(20,20,40,0.18);
+    box-shadow: 0 4px 24px rgba(20,20,24,0.18);
     width: 48%;
     min-width: 320px;
     transition: box-shadow 0.2s;
-    color: #e0e0e0;
 }
 
 .post-text-box:hover, .profile:hover {
     /* Hover effect for content cards */
-    box-shadow: 0 8px 32px rgba(20,20,40,0.28);
+    box-shadow: 0 8px 32px rgba(20,20,24,0.28);
 }
 
 .post-text-box h1, .profile h1 {
     /* Headings inside content cards */
     font-size: 1.5em;
-    color: #a6a6ff;
+    color: #fff;
     margin-top: 0;
 }
 
@@ -133,17 +135,17 @@ nav a:hover {
     border-radius: 50%;
     display: block;
     margin: 0 auto 1em auto;
-    border: 4px solid #35355a;
-    box-shadow: 0 2px 8px rgba(20,20,40,0.18);
+    border: 4px solid #35363a;
+    box-shadow: 0 2px 8px rgba(20,20,24,0.18);
     object-fit: cover;
-    background: #232336;
+    background: #232326;
 }
 
 .profile p {
     /* Profile description text */
     font-size: 1.08em;
     line-height: 1.7;
-    color: #c7c7e6;
+    color: #e0e0e0;
 }
 
 /* Sidebar Navigation */
@@ -151,67 +153,73 @@ nav a:hover {
     /* Sidebar container styles */
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, #181920 80%, #232336 100%);
+    background: linear-gradient(180deg, #16171a 80%, #232326 100%);
     padding: 2em 1em;
     min-width: 160px;
     max-width: 200px;
     height: 100%;
-    box-shadow: 2px 0 12px rgba(20,20,40,0.13);
+    box-shadow: 2px 0 12px rgba(20,20,24,0.13);
     border-radius: 0 18px 18px 0;
     margin-right: 2em;
     gap: 1.5em;
     align-items: flex-start;
+    /* Hide sidebar by default for desktop, will be shown only for dropdown trigger */
+    position: fixed;
+    top: 2.5em;
+    left: 2em;
+    z-index: 100;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    min-width: unset;
+    max-width: unset;
+    margin-right: 0;
+    gap: 0;
 }
 
 /* Dropdown menu styles */
 .dropdown {
     position: relative;
-    width: 100%;
+    width: auto;
 }
 
 .dropbtn {
-    background-color: #232336;
-    color: #e0e0e0;
-    padding: 0.7em 1.2em;
-    font-size: 1.1em;
+    background: none;
     border: none;
-    border-radius: 6px;
+    padding: 0;
+    margin: 0;
     cursor: pointer;
-    width: 100%;
-    text-align: left;
-    font-weight: 600;
-    transition: background 0.2s;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background 0.2s;
 }
 
-.dropbtn::after {
-    content: "▼";
-    font-size: 0.8em;
-    margin-left: 0.7em;
-    color: #a6a6ff;
-    transition: transform 0.2s;
-}
-
-.dropdown.open .dropbtn::after,
-.dropdown:focus-within .dropbtn::after,
-.dropdown:hover .dropbtn::after {
-    transform: rotate(180deg);
+.dropbtn img {
+    width: 32px;
+    height: 32px;
+    filter: invert(1);
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #35355a;
+    background-color: #232326;
+}
+
+.dropbtn::after {
+    display: none;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     left: 0;
-    top: 110%;
-    background-color: #232336;
+    top: 48px;
+    background-color: #232326;
     min-width: 160px;
-    box-shadow: 0 8px 24px rgba(20,20,40,0.28);
+    box-shadow: 0 8px 24px rgba(20,20,24,0.28);
     border-radius: 8px;
     z-index: 1;
     flex-direction: column;
@@ -225,7 +233,8 @@ nav a:hover {
 }
 
 .dropdown-content a {
-    color: #e0e0e0;
+    color: #f5f5f5;
+    background: transparent;
     padding: 0.7em 1.2em;
     text-decoration: none;
     display: block;
@@ -233,12 +242,43 @@ nav a:hover {
     font-weight: 500;
     font-size: 1.08em;
     transition: background 0.2s, color 0.2s;
-    background: transparent;
 }
 
 .dropdown-content a:hover {
-    background: #35355a;
+    background: #35363a;
     color: #fff;
+}
+
+/* Position sidebar trigger in header */
+.header-bar {
+    /* ...existing code... */
+    position: relative;
+}
+
+.header-bar .sidebar {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 1em 0 0;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    /* ...existing code... */
+    .header-bar .sidebar {
+        margin: 0 0.5em 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    /* ...existing code... */
+    .header-bar .sidebar {
+        display: flex;
+    }
 }
 
 /* Main Content Area */
@@ -253,18 +293,18 @@ main {
 /* Footer Section */
 footer {
     /* Footer background and text styles */
-    background: linear-gradient(90deg, #181920 60%, #232336 100%);
-    color: #e0e0e0;
+    background: linear-gradient(90deg, #16171a 60%, #232326 100%);
+    color: #f5f5f5;
     text-align: center;
     padding: 1.5em 0 1em 0;
     margin-top: 3em;
-    box-shadow: 0 -2px 12px rgba(20,20,40,0.18);
+    box-shadow: 0 -2px 12px rgba(20,20,24,0.18);
     font-size: 1.1em;
 }
 
 footer a {
     /* Footer link styles */
-    color: #e0e0e0;
+    color: #f5f5f5;
     margin: 0 1.5em;
     text-decoration: none;
     font-weight: 500;
@@ -273,7 +313,7 @@ footer a {
 
 footer a:hover {
     /* Footer link hover effect */
-    color: #a6a6ff;
+    color: #fff;
     text-decoration: underline;
 }
 
