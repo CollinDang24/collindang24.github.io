@@ -18,12 +18,39 @@ header {
     box-shadow: 0 2px 12px rgba(20,20,24,0.18);
 }
 
+/* Header Title Styles */
+.header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header-title .subtitle {
+    margin: 0;
+    font-size: 1em;
+    color: #ccc;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
 .header-bar {
     /* Flex layout for header bar */
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    padding: 0.5em 0;
 }
 
 .header-bar h1 {
