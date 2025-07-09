@@ -238,7 +238,7 @@ nav a:hover {
 
 /* Animate the bars when .change is applied */
 .hamburger-btn.change .bar1 {
-    transform: translate(0, 6px) rotate(-45deg);
+    transform: translate(0, 7px) rotate(-45deg);
 }
 
 .hamburger-btn.change .bar2 {
@@ -246,7 +246,7 @@ nav a:hover {
 }
 
 .hamburger-btn.change .bar3 {
-    transform: translate(0, -6px) rotate(45deg);
+    transform: translate(0, -7px) rotate(45deg);
 }
 
 .hamburger-btn:hover, .hamburger-btn:focus {

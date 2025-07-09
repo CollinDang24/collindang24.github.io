@@ -21,7 +21,6 @@
       </header>
       <!-- Side popout menu -->
       <nav class="sidebar" id="sidebarNav">
-         <button class="closebtn" onclick="closeSidebar()" aria-label="Close menu">&times;</button>
          <div class="sidebar-links">
             <a href="https://collindang24.github.io/">Home</a>
             <a href="about">About</a>
@@ -61,10 +60,6 @@
             } else {
                sidebar.classList.add('open');
             }
-         }
-         function closeSidebar() {
-            document.getElementById('sidebarNav').classList.remove('open');
-            document.getElementById('hamburgerBtn').classList.remove('change');
          }
          // Optional: close sidebar when clicking outside
          document.addEventListener('click', function(e) {
