@@ -43,12 +43,13 @@ header {
 
 .header-bar nav a {
     /* Header navigation link styles */
-    display: block; /* Make the links appear below each other instead of side-by-side */
+    float: left; /* Float links side by side */
     text-align: center; /* Center-align text */
-    padding: 16px; /* Add some padding */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
     transition: all 0.3s ease; /* Add transition for hover effects */
     color: white; /* White text color */
-    font-size: 36px; /* Increased font-size */
+    font-size: 36px; /* Increased font size */
 }
 
 .header-bar nav a:hover {
@@ -62,9 +63,9 @@ nav {
     /* Top margin for nav bar */
     margin-top: 0.5em;
 }
-
+/*
 nav a {
-    /* Main navigation link styles */
+    /* Main navigation link styles *
     color: #f5f5f5;
     background: transparent;
     margin-right: 1.5em;
@@ -74,7 +75,7 @@ nav a {
     padding: 0.3em 0.8em;
     border-radius: 4px;
     transition: background 0.2s, color 0.2s;
-}
+} */
 
 nav a:hover {
     /* Main navigation link hover effect */
