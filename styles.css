@@ -2,13 +2,13 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+    background: linear-gradient(135deg, #121213 0%, #121213 100%);
     color: #222;
     min-height: 100vh;
 }
 
 header {
-    background: linear-gradient(90deg, #22223b 60%, #4a4e69 100%);
+    background: linear-gradient(90deg, #303031 60%, #121213 100%);
     color: #fff;
     padding: 2em 2em 1em 2em;
     box-shadow: 0 2px 12px rgba(34,34,59,0.08);
