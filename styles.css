@@ -216,7 +216,7 @@ nav a:hover {
     color: #fff;
 }
 
-/* Hamburger button in header */
+/* Hamburger button in header (animated) */
 .hamburger-btn {
     background: none;
     border: none;
@@ -230,12 +230,37 @@ nav a:hover {
     height: 44px;
     border-radius: 50%;
     transition: background 0.2s;
+    outline: none;
+    z-index: 300;
 }
 
-.hamburger-btn img {
-    width: 32px;
-    height: 32px;
-    filter: invert(1);
+.hamburger-btn:focus {
+    outline: 2px solid #fff;
+}
+
+.hamburger-btn .bar1, 
+.hamburger-btn .bar2, 
+.hamburger-btn .bar3 {
+    width: 28px;
+    height: 3px;
+    background-color: #f5f5f5;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+    display: block;
+}
+
+/* Animate the bars when .change is applied */
+.hamburger-btn.change .bar1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.hamburger-btn.change .bar2 {
+    opacity: 0;
+}
+
+.hamburger-btn.change .bar3 {
+    transform: rotate(45deg) translate(-6px, -6px);
 }
 
 .hamburger-btn:hover, .hamburger-btn:focus {
