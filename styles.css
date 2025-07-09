@@ -181,6 +181,23 @@ nav a:hover {
     text-align: left;
     font-weight: 600;
     transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropbtn::after {
+    content: "▼";
+    font-size: 0.8em;
+    margin-left: 0.7em;
+    color: #a6a6ff;
+    transition: transform 0.2s;
+}
+
+.dropdown.open .dropbtn::after,
+.dropdown:focus-within .dropbtn::after,
+.dropdown:hover .dropbtn::after {
+    transform: rotate(180deg);
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -201,6 +218,12 @@ nav a:hover {
     padding: 0.5em 0;
 }
 
+.dropdown.open .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
 .dropdown-content a {
     color: #e0e0e0;
     padding: 0.7em 1.2em;
@@ -216,12 +239,6 @@ nav a:hover {
 .dropdown-content a:hover {
     background: #35355a;
     color: #fff;
-}
-
-/* Show dropdown on hover or focus */
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-    display: flex;
 }
 
 /* Main Content Area */

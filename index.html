@@ -17,8 +17,8 @@
       <div class="container">
          <!-- Sidebar with dropdown menu -->
          <aside class="sidebar">
-            <div class="dropdown">
-               <button class="dropbtn">Menu</button>
+            <div class="dropdown" id="sidebarDropdown">
+               <button class="dropbtn" onclick="toggleDropdown(event)">Menu</button>
                <div class="dropdown-content">
                   <a href="https://collindang24.github.io/">Home</a>
                   <a href="about">About</a>
@@ -49,5 +49,19 @@
       <footer>
          <!-- Footer can be left empty or with copyright -->
       </footer>
+      <script>
+         function toggleDropdown(event) {
+            event.stopPropagation();
+            var dd = document.getElementById('sidebarDropdown');
+            dd.classList.toggle('open');
+         }
+         // Close dropdown when clicking outside
+         document.addEventListener('click', function(e) {
+            var dd = document.getElementById('sidebarDropdown');
+            if (dd && dd.classList.contains('open')) {
+               dd.classList.remove('open');
+            }
+         });
+      </script>
    </body>
 </html>
