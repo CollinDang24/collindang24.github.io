@@ -1,6 +1,6 @@
 # collindang24.github.io
 
-This is the personal portfolio website of Collin Dang, a 4th-year Computer Systems Engineering student at Carleton University.
+This is the personal portfolio website of Collin Dang, a Computer Systems Engineer
 
 ## Features
 
