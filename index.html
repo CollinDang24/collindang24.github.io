@@ -1,12 +1,224 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
+    <head>
+        <title>Collin Dang</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+    <body>
+        <div class="scroll-progress" id="scrollStripe"></div>
+        <div class="top-stripe"></div>
+        <nav class="navbar">
+            <ul>    
+                <li><a href="#home"><b>HOME</b></a></li>
+                <li><a href="#about"><b>ABOUT ME</b></a></li>
+                <li><a href="#experience"><b>EXPERIENCE</b></a></li>
+                <li><a href="#projects"><b>PROJECTS</b></a></li>
+            </ul>
+        </nav>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+        <section id="home" class="section">
+            <img src="profilepic.jpg" >
+            <hr class="divider">
+            <p>Hey! I'm <span class="highlight">Collin Dang</span>. Here, you can learn a little bit about me, and check out projects 
+                I've worked on! Please feel free to reach out, I'm always looking for new opportunities to learn and grow!</p>
+        </section>
+        
+        <section id="about" class="section">
+            <h1>About Me</h1>
+            
+            <h2>Overview</h2>
+            <hr class="divider">
+            <p>I'm Computer Systems Engineering graduate from Carleton University. I'm looking to leverage AI/ML to develop Embedded Systems 
+                and Systems Software using C, C++, and Python, with a focus on Firmware, Real-Time Systems, and Hardware-Software Integration.
+                 I'm also interested DevOps and Platform Engineering solutions using Python, Go, and Bash for Automated Pipelines, Developer 
+                 Tooling, and Scalable Infrastructure Systems.</p>
+            
+            <h2>Education</h2>
+            <hr class="divider">
+            <p>Bachelor of Engineering | Major in Computer Systems</p>
+            <p2>Carleton University | Ottawa, ON<span class="force-right">May 2026</span></p2>
+            <p2>Relevant Coursework: AI in Engineering, Machine Learning, Network and Software Security, Software Engineering, Operating 
+                Systems, Data Analysis</p2>
+            
+            <h2>Skills</h2>
+            <hr class="divider">
+            <p>Languages</p>
+            <p2>Python, C/C#/C++, Verilog, SQLite, HTML, CSS</p2>
+            <p>Tools</p>
+            <p2>Git, GitHub, Jira, Jupyter Notebooks, MATLAB, TestStudio, AutoCAD, MultiSim, Wireshark, Draw.io, Microsoft 365</p2>
+            <p>Other</p>
+            <p2>AI/ML, Software Testing, Secure Coding, RCA, Technical Writing, Documentation, SDLC</p2>
+            
+        </section>
 
-</body>
+        <section id="experience" class="section">
+            <h1>Experience</h1>
+
+            <h2>Software Test Specialist</h2>
+            <hr class="divider">
+            <p>Magnet Forensics<span class="force-right">Jan 2024 - Aug 2024 | Kanata, ON</span></p>
+            <p2>● Developed and tested a new settings page for MAGNET AXIOM, independently programmed, manually tested, and updated automatic 
+                regression tests to ensure seamless integration and software quality</p2>
+            <p2>● Collaborated with software developers and other testers to refine software and resolve issues, leading to fewer customer-
+                reported bugs and high customer satisfaction</p2>
+            <p2>● Developed new and enhanced existing C# unit tests and automated tests in Test Studio, cutting down manual testing effort and 
+                strengthening test reliability</p2>
+            <p2>Skills: Software Testing, TestStudio, C#, Python, XML, CSS, Bash, Jira, AWS, Git.</p2>
+
+            <h2>Production Operator and Assembler</h2>
+            <hr class="divider">
+            <p>Virtucom Cable Products LTD.<span class="force-right">May 2023 - Aug 2023 | Carleton Place, ON</span></p>
+            <p2>● Optimized workstations by upgrading and configuring system hardware and software, increasing label printing speeds by 15%, 
+                and improving overall system performance for day-to-day tasks</p2>
+            <p2>● Restructured an assembly line system by analyzing and reconfiguring workflows, increasing efficiency by 33% while 
+                maintaining product quality and meeting consumer expectations</p2>
+            <p2>● Worked collectively with staff and engineers to ensure that constructed/modified products are to standard, which led to a 
+                smoother process, higher customer satisfaction, and a decrease in product returns</p2>
+            <p2>Skills: Electrical Manufacturing, Machine Assembly, Technical Drawings, Quality Assurance.</p2>
+
+            <h2>Front of House</h2>
+            <hr class="divider">
+            <p>The Noodle House<span class="force-right">Mar 2017 - Present | Ottawa, ON</span></p>
+            <p2>● Delivered attentive, proactive customer service (order support, table maintenance, real-time issue resolution) contributing 
+                to a restaurant-wide 4.7/5 customer satisfaction rating</p2>
+            <p2>● Coordinated with kitchen and other front-of-house staff to streamline service flow, improving table turnover by 10% without 
+                compromising service quality</p2>
+            <p2>● Managed nightly closing operations (cleaning, restocking, prep), reducing opening times by 30 minutes.</p2>
+            <p2>● Simultaneously managed service for 8-10 tables during peak hours, prioritizing tasks in real time to maintain fast, 
+                accurate service</p2>
+            <p2>Skills: Clear Communication, Quick Problem-Solving, Calm Under Presure, Multitasking & Organization.</p2>
+        </section>
+
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+
+            <h2>Personal Website</h2>
+            <hr class="divider">
+            <p>Collin Dang<span class="force-right">September 2026</span></p>
+            <p2>Developed a responsive personal site from the ground up using HTML, CSS, and JavaScript. Currently hosted on GitHub Pages. 
+                Features smooth-scrolling navigation, fluid typography that adapts across screen sizes, and a clean, minimal layout designed 
+                for both desktop and mobile. Plans to continuously update as new skills and sections are added, and an addition of a custom 
+                domain.</p2>
+            <p2>Skills: HTML, CSS, JavaScript, Web Design.</p2>
+
+            <h2>Accessible Autonomous Vehicle</h2>
+            <hr class="divider">
+            <p>Localization Group Leader<span class="force-right">Sept 2025 - April 2026</span></p>
+            <p2>● Independently researched, designed, and implemented wheel tachometers for the autonomous vehicle using C++, enabling 
+                real-time speed calculations and direction detection</p2>
+            <p2>● Contributed to radar, LiDAR, and GPS/GNSS systems integration, accelerating overall completion timeline through effective 
+                collaboration and technical support</p2>
+            <p2>● Designed custom PCBs and 3D printed mounting components to support other teams</p2>
+            <p2>Skills: C++, ROS2, RaspberryPi/Arduino, PCB Design, AutoCAD.</p2>
+
+            <h2>Smart Attendance System</h2>
+            <hr class="divider">
+            <p>Hardware/Electrical Technical Lead<span class="force-right">Jan 2025 - April 2025</span></p>
+            <p2>● Researched and co-designed system architecture for SASS attendance platform, including RFID and QR code 2FA systems, 
+                reducing sign-in times by 15%+ and earning project A+ grade</p2>
+            <p2>● Led electrical engineering efforts, hand-designing electrical systems using department hardware kits for simple, portable, 
+                scalable units</p2>
+            <p2>● Built and managed Firebase database, enabling real-time data transfers, seamless cloud authentication, and instant 
+                connections between attendance systems and admin portals.</p2>
+            <p2>Skills: Python, SQLite, C++, Flutter, Arduino, Flow Charts, UML Diagrams.</p2>
+
+            <h2>Modular RSA Exponentiation Accelerator</h2>
+            <hr class="divider">
+            <p>Area-Optimized RTL Designer & Testing Lead<span class="force-right">Mar 2026 - May 2026</span></p>
+            <p2>● Designed and implemented two 32-bit RSA accelerator architectures on a Digilent Zybo Z10 FPGA, targeting area-optimized and 
+                speed-optimized trade-offs</p2>
+            <p2>● Implemented Montgomery modular multiplication in hardware, eliminating costly division operations using iterative 
+                shift-and-add arithmetic</p2>
+            <p2>● Achieved timing closure at 100 MHz with zero failing endpoints on both designs, using under 2% of available FPGA LUT 
+                resources</p2>
+            <p2>● Validated correctness across 6 simulation test cases including a full RSA round-trip (42⁷ mod 3233 = 240) and edge cases 
+                such as base = 0 and all-ones exponents</p2> 
+            <p2>● Designed a serialized packet accumulation input protocol (32-bit data + 2-bit select) to stay within the board's 125 bonded 
+                IOB pin constraint</p2> 
+            <p2>Skills: Vivado, Verilog, RSA Encryption, C++, Xilinx FPGA Boards, Flow Charts.</p2>
+
+            <h2>Electric Plane Research Project</h2>
+            <hr class="divider">
+            <p>Solar Panel Researcher<span class="force-right">Sep 2022 - Dec 2022</span></p>
+            <p2>Researched one engineering-based method for improving our environment, solar panels on electric planes. Prepared a 
+                presentation for non technical audience to explain the how science (mechanics, physics, programming, chemistry, etc.) 
+                plays a role in how these methods work. </p2>
+            <p2>Skills: Research, Presenting Technical Info to a Non-Technical Audience, Log Reports, Letter of Proposal.</p2>
+
+            <h2>Roof Truss Design Project</h2>
+            <hr class="divider">
+            <p>Team Leader<span class="force-right">Mar 2022 - May 2022</span></p>
+            <p2>Designed trusses that will support the roof of a hockey arena given certain materials and weather conditions. Used what we 
+                learned about structural analysis and the engineering design process</p2>
+            <p2>● Managed an understaffed team of 2 engineers by organizing meetings, assigning roles and responsibilities, and set goals 
+                which improved overall organization and ensured all deadlines were met</p2>
+            <p2>● Identified problems and systematically determined solutions utilizing technical knowledge, spreadsheets, and knowledge 
+                of physics which ultimately lead us to design a proper roof</p2>
+            <p2>Skills: Spreadsheets, Time Management.</p2>
+
+            <h2>Reverse Engineering of a Clamp</h2>
+            <hr class="divider">
+            <p>Lead Designer<span class="force-right">Jan 2022 - May 2022</span></p>
+            <p2>Designed an item that clamps as one of its functions, our team chose to design a headphone hanger. Used knowledge of 3d 
+                modelling, technical engineering drawings, reverse engineering.</p2>
+            <p2>● Designed the final iteration of the headphone hanger using technical drawings and AutoCad Fusion 360 to be submitted 
+                and was able to receive a passing grade.</p2>
+            <p2>● Developed designs with team members, identified and addressed problems with current designs and used that to develop 
+                the final iteration of the headphone hanger</p2>
+            <p2>Skills: Engineering Drawings, AutoCad, Attention to Detail.</p2>
+
+            <h2>Book Directory Project</h2>
+            <hr class="divider">
+            <p>Team Leader<span class="force-right">Nov 2021 - Dec 2021</span></p>
+            <p2>Analyzed the subset of the Google books data set using Python. Used what we learned about reading data set files, data 
+                structures, sorting data sets, creating text and batch interfaces, visualizing/analyzing data sets, and testing.</p2>
+            <p2>● Managed a cross-functional team of four engineers by organizing meetings, assigning roles and responsibilities, and set 
+                goals which improved overall organization and ensured all deadlines were met</p2>
+            <p2>● Identified problems and systematically determined solutions utilizing python programming skills, technical knowledge, and 
+                actively help others within the team therefore improving colleague to colleague relations and improved workplace productivity 
+                and satisfaction</p2>
+            <p2>Skills: Python, Data Management.</p2>
+        </section>
+
+        <section id="end" class="section">
+            <p>© 2026 - Collin Dang</p>
+        </section>
+
+        <!-- Scroll Progression Bar -->
+        <script>
+            window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollStripe').style.width = scrollPercent + '%';
+        });
+        </script>
+
+        <!-- Section Highlight -->
+        <script>
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.navbar ul li a');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0, rootMargin: '-50% 0px -50% 0px' });
+
+            sections.forEach(section => observer.observe(section));
+        </script>
+    </body>
 </html>
