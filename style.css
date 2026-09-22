@@ -1,3 +1,4 @@
+
 html {
     scroll-behavior: smooth;
 }
@@ -37,6 +38,22 @@ body {
     background-color: #ffffff;
     z-index: 1000;
     font-size: clamp(1rem, 2vw, 1.75rem);
+}
+
+.resume-btn {
+    display: block;
+    margin-top: 10px;  
+    padding: 12px 20px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.resume-btn:hover {
+    background-color: #cc7000;
 }
 
 ul {
@@ -174,4 +191,15 @@ h1 {
     color: #3d3c3c;
     align-self: center;
     margin-bottom: -40px;
+}
+
+#contact {
+    background-color: #f4f4f4;
+    font-size: 150%;
+}
+
+#contact p {
+    font-size: 100%;
+    color: #3d3c3c;
+    margin-top: 0px;
 }
